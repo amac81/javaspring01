@@ -25,7 +25,7 @@ public class ProductController {
 		Department d2 = new Department(2L, "Pet");
 		
 		Product p1 = new Product(1L, "Mcbook pro", 2200.0, d1);
-		Product p2 = new Product(2L, "Pc Gamer", 5000.0, d1);
+		Product p2 = new Product(2L, "Pc Gamer", 3000.0, d1);
 		Product p3 = new Product(3L, "Pet House", 330.0, d2);
 		
 		List <Product> products = new ArrayList <> ();
