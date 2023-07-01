@@ -1,22 +1,33 @@
 package pt.bitclinic.javaspring01.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_department")
 public class Department {
 
-	private long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long productId;
 	private String name;
 	
-	public Department(long id, String name) {
-		super();
-		this.id = id;
+	public Department() {}
+	
+	public Department(long productId, String name) {
+		this.productId = productId;
 		this.name = name;
 	}
 
-	public long getId() {
-		return id;
+	public long getProductId() {
+		return productId;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setProductId(long productId) {
+		this.productId = productId;
 	}
 
 	public String getName() {
